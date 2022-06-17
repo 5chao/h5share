@@ -22,39 +22,15 @@
           //openTagList: ["wx-open-launch-weapp"], // 可选，需要使用的开放标签列表，例如['wx-open-launch-app']
         });
       wx.ready(function () {
-      
+         console.log('|----000111---')
 
-        // config信息验证后会执行 ready 方法，所有接口调用都必须在 config 接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在 ready 函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在 ready 函数中
-        console.log("|---000---");
-        var btn = document.getElementById("launch-btn");
-        btn.addEventListener("launch", function (e) {
-          console.log("success");
-        });
-        btn.addEventListener("error", function (e) {
-          console.log("fail", e);
-        });
       });
     </script>
   </head>
   <body>
     <div class="module-wrap">1212121333</div>
     <div>
-      <wx-open-launch-weapp
-        id="launch-btn"
-        username="gh_7127bc2e7226"
-        path="pages/home/home.html"
-      >
-        <script type="text/wxtag-template">
-          <style>
-            .btn {
-              padding: 12px;
-              width: 200px;
-              height: 100px;
-            }
-          </style>
-          <button class="btn">打开小程序</button>
-        </script>
-      </wx-open-launch-weapp>
+     6666
     </div>
     <script>
       document.addEventListener("WeixinOpenTagsError", function (e) {
@@ -67,16 +43,7 @@
       });
     </script>
     <script>
-      function myNew(context) {
-        const obj = new Object();
-        obj.__proto__ = context.prototype;
-        const res = context.apply(obj, [...arguments].slice(1));
-        return typeof res === "object" ? res : obj;
-      }
-      function jsonp_935600_(data) {
-        console.log(data, "|--data-");
-      }
-
+     
       // let _http = axios.create();
       // axios.post("https://192.168.1.207:5688/getWX").then((res) => {
       //   console.log("|--res---", res);
