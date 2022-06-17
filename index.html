@@ -23,7 +23,27 @@
         });
       wx.ready(function () {
          console.log('|----000111---')
-
+         wx.onMenuShareAppMessage({
+         title: "88888",
+         desc: 'desc 20220617',
+         link: 'https://5chao.github.io/h5share/',
+         imgUrl: 'https://udiannet.oss-cn-shenzhen.aliyuncs.com/udiannet/index/certificate.png', //分享图标
+         type: "",
+         dataUrl: "",
+         success: function() {
+         console.log("分享成功");
+         },
+         cancel: function() {
+         console.log("取消分享");
+         },
+         fail: function(res) {
+         console.log("fail" + JSON.stringify(res));
+         },
+         complete: function(res) {
+         //接口调用完成时执行的回调函数，无论成功或失败都会执行。
+         console.log("complete" + JSON.stringify(res));
+         }
+         });
       });
     </script>
   </head>
