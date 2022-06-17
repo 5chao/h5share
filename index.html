@@ -15,11 +15,11 @@
          wx.config({
           debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印
           appId: "wxd368018bccf96a16", // 必填，公众号的唯一标识
-          timestamp: "1655427017", // 必填，生成签名的时间戳
+          timestamp: "1655437986", // 必填，生成签名的时间戳
           nonceStr: "88888899", // 必填，生成签名的随机串
-          signature: "a593e474b198036323d07ac52700e2063ae749fb", // 必填，签名
+          signature: "8db42b236d86fc50dc288b754cec7d23ba5a85e4", // 必填，签名
           jsApiList: ["onMenuShareAppMessage"], // 必填，需要使用的JS接口列表
-          //openTagList: ["wx-open-launch-weapp"], // 可选，需要使用的开放标签列表，例如['wx-open-launch-app']
+          openTagList: ["wx-open-launch-weapp"], // 可选，需要使用的开放标签列表，例如['wx-open-launch-app']
         });
       wx.ready(function () {
          console.log('|----000111---')
@@ -48,10 +48,25 @@
     </script>
   </head>
   <body>
-    <div class="module-wrap">1212121333</div>
+    <div class="module-wrap">889989877878</div>
     <div>
      6666777
     </div>
+     <div>
+     
+        <wx-open-launch-weapp
+  id="launch-btn"
+   username="gh_7127bc2e7226"
+        path="pages/home/home.html"
+>
+  <script type="text/wxtag-template">
+    <style>.btn { padding: 12px;color: '#f00'; }</style>
+    <button class="btn">打开小程序</button>
+  </script>
+</wx-open-launch-weapp>
+     
+     
+     </div>
     <script>
       document.addEventListener("WeixinOpenTagsError", function (e) {
         console.error(e.detail.errMsg); // 无法使用开放标签的错误原因，需回退兼容。仅无法使用开放标签，JS-SDK其他功能不受影响
